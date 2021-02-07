@@ -1,10 +1,15 @@
-<p>messages works!</p>
 
 <div *ngIf="messages.length">
-  <table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
     <tbody *ngFor="let message of messages">
       <tr>
-        <td>{{ message.id }}</td>
+        <th scope="row">{{ message.id }}</th>
         <td>{{ message.Text }}</td>
     </tbody>
   </table>

@@ -1,9 +1,9 @@
-<p>fileloader works!</p>
-<div class="block">
-    <form>
-        <label id="lbl">Code </label>
-        <input type="file" (change)="setFileName($event)">
 
-        <button type="button" class="btn btn-primary" (click)="loadFile()" >Upload File</button>
-    </form>
-</div>
+<form class="form-inline">
+  <div class="form-group mb-2">
+        <label for="filename" class="sr-only">dmrconfig .conf file</label>
+        <input type="file" class="form-control" id="filename" placeholder="device.conf" (change)="setFileName($event)">
+  </div>
+
+  <button type="button" class="btn btn-primary mb-2" (click)="loadFile()">Load File</button>
+</form>
