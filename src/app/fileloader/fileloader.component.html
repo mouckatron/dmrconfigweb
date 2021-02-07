@@ -1,0 +1,9 @@
+<p>fileloader works!</p>
+<div class="block">
+    <form>
+        <label id="lbl">Code </label>
+        <input type="file" (change)="setFileName($event)">
+
+        <button type="button" class="btn btn-primary" (click)="loadFile()" >Upload File</button>
+    </form>
+</div>

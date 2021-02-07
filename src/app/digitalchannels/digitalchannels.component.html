@@ -1,0 +1,41 @@
+
+<div *ngIf="channels.length">
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Receive</th>
+        <th>Transmit</th>
+        <th>Power</th>
+        <th>Scan</th>
+        <th>TOT</th>
+        <th>RO</th>
+        <th>Admit</th>
+        <th>Color</th>
+        <th>Slot</th>
+        <th>RxGL</th>
+        <th>TxContact</th>
+        <th>comment</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let channel of channels">
+      <tr>
+        <td>{{ channel.id }}</td>
+        <td>{{ channel.Name }}</td>
+        <td>{{ channel.Receive }}</td>
+        <td>{{ channel.Transmit }}</td>
+        <td>{{ channel.Power }}</td>
+        <td>{{ channel.Scan }}</td>
+        <td>{{ channel.TOT }}</td>
+        <td>{{ channel.RO }}</td>
+        <td>{{ channel.Admit }}</td>
+        <td>{{ channel.Color }}</td>
+        <td>{{ channel.Slot }}</td>
+        <td>{{ channel.RxGL }}</td>
+        <td>{{ channel.TxContact }}</td>
+        <td>{{ channel.comment }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

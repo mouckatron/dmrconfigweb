@@ -1,0 +1,29 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+
+    height: inherit;
+
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover, nav a.active:hover {
+    background-color: #1976FF
+}
+
+nav a.active {
+    background-color: #1976bb
+}
