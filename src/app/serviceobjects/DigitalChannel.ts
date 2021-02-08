@@ -12,7 +12,6 @@ export class DigitalChannel {
     Slot: number;
     RxGL: string;
     TxContact: string;
-    comment: string;
 }
 
 export class DigitalChannelFactory {
@@ -22,7 +21,7 @@ export class DigitalChannelFactory {
         var parts = line.trim().split(/\s+/)
 
         dc.id = Number(parts[0]);
-        dc.Name = parts[1];
+        dc.Name = parts[1].replace(/_/g, ' ');
         dc.Receive = Number(parts[2]);
         dc.Transmit = parts[3];
         dc.Power = parts[4];
@@ -34,7 +33,6 @@ export class DigitalChannelFactory {
         dc.Slot = Number(parts[10]);
         dc.RxGL = parts[11];
         dc.TxContact = parts[12];
-        dc.comment = parts[13];
 
         return dc
     }

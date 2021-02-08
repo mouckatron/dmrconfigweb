@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { RadioConfigService } from './RadioConfig.service';
 import { DigitalChannelService } from './digital-channel.service';
+import { AnalogChannelService } from './analog-channel.service';
 import { MessagesService } from './messages.service';
 
 @Injectable({
@@ -13,6 +14,7 @@ export class FileService {
     constructor(
         private radioConfig: RadioConfigService,
         private digitalChannelService: DigitalChannelService,
+        private analogChannelService: AnalogChannelService,
         private messagesService: MessagesService
     ) { }
 
@@ -65,6 +67,9 @@ export class FileService {
             switch(true) {
                 case element[0].includes("Digital"):
                     this.digitalChannelService.parseLines(element.slice(1));
+                    break;
+                case element[0].includes("Analog"):
+                    this.analogChannelService.parseLines(element.slice(1));
                     break;
                 case element[0].includes("Message"):
                     this.messagesService.parseLines(element.slice(1));

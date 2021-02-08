@@ -7,25 +7,28 @@ import { DigitalChannel,DigitalChannelFactory } from '../serviceobjects/DigitalC
 })
 export class DigitalChannelService {
 
-  channels: DigitalChannel[];
+    channels: DigitalChannel[];
 
     constructor() {
         this.channels = [];
     }
 
-  public parseLines(lines: string[]){
+    public parseLines(lines: string[]){
 
-    lines.forEach(element => {
-      this.channels.push(DigitalChannelFactory.parse(element));
-    });
-  }
+        lines.forEach(element => {
+            this.channels.push(DigitalChannelFactory.parse(element));
+        });
+    }
 
-  public add(dc: DigitalChannel) {
-    this.channels.push(dc)
-  }
+    public add(dc: DigitalChannel) {
+        this.channels.push(dc)
+    }
 
     public getChannels(){
         return this.channels;
     }
 
+    public count(){
+        return this.channels.length;
+    }
 }

@@ -1,1 +1,39 @@
-<p>analogchannels works!</p>
+
+<div *ngIf="channels.length">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Receive</th>
+                <th scope="col">Transmit</th>
+                <th scope="col">Power</th>
+                <th scope="col">Scan</th>
+                <th scope="col">TOT</th>
+                <th scope="col">RO</th>
+                <th scope="col">Admit</th>
+                <th scope="col">Sq</th>
+                <th scope="col">RxTone</th>
+                <th scope="col">TxTone</th>
+                <th scope="col">Width</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let channel of channels">
+            <tr>
+                <th scope="row">{{ channel.id }}</th>
+                <td>{{ channel.Name }}</td>
+                <td>{{ channel.Receive }}</td>
+                <td>{{ channel.Transmit }}</td>
+                <td>{{ channel.Power }}</td>
+                <td>{{ channel.Scan }}</td>
+                <td>{{ channel.TOT }}</td>
+                <td>{{ channel.RO }}</td>
+                <td>{{ channel.Admit }}</td>
+                <td>{{ channel.Sq }}</td>
+                <td>{{ channel.RxTone }}</td>
+                <td>{{ channel.TxTone }}</td>
+                <td>{{ channel.Width }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

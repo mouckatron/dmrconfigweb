@@ -14,7 +14,8 @@ import { ZonesComponent } from './zones/zones.component';
 import { ScanlistsComponent } from './scanlists/scanlists.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { GrouplistsComponent } from './grouplists/grouplists.component';
-import { MessagesComponent } from './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MessagesComponent } from './messages/messages.component'
     ScanlistsComponent,
     ContactsComponent,
     GrouplistsComponent,
-    MessagesComponent
+    MessagesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

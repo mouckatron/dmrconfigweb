@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AnalogChannel } from '../serviceobjects/AnalogChannel'
+import { AnalogChannelService } from '../services/analog-channel.service'
+
 @Component({
   selector: 'app-analogchannels',
   templateUrl: './analogchannels.component.html',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalogchannelsComponent implements OnInit {
 
-  constructor() { }
+    channels: AnalogChannel[];
 
-  ngOnInit(): void {
-  }
+    constructor(private analogChannelService: AnalogChannelService) { }
+
+    ngOnInit(): void {
+        this.getChannels();
+    }
+
+    getChannels(): void {
+        this.channels = this.analogChannelService.getChannels();
+    }
 
 }
