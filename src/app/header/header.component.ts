@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     }
 
     loadCounts(): void {
-        this.digitalChannelCount = this.digitalChannelService.count();
-        this.analogChannelCount = this.analogChannelService.count();
+        //this.digitalChannelCount = this.digitalChannelService.count();
+        //this.analogChannelCount = this.analogChannelService.count();
     }
 
 }
